@@ -10,7 +10,7 @@ topic = input("What topic should I explain? (e.g. GST, cricket rules): ")
 
 reply = client.chat.completions.create(
     model="openai/gpt-oss-120b",
-    max_tokens=40,
+    max_tokens=300,
     messages=[
         {"role": "user", "content": f"Explain {topic} in 3 simple lines."}
     ],

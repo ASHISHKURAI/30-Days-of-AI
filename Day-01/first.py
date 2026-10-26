@@ -6,7 +6,7 @@ client = Groq()                    # finds GROQ_API_KEY by itself
 
 reply = client.chat.completions.create(
     model="openai/gpt-oss-120b",      # check console.groq.com/docs/models for current names
-    max_tokens=40,                   # maximum length of the answer
+    max_tokens=300,                   # maximum length of the answer
     messages=[
 {"role": "user", "content": "Explain the rules of cricket in 3 simple lines."}
     ],
