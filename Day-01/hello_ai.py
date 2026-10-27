@@ -1,8 +1,10 @@
 # Day 1 real project: Hello AI
 # Ask the model to explain a topic you actually care about in 3 simple lines.
+import sys
 from dotenv import load_dotenv
 from groq import Groq
 
+sys.stdout.reconfigure(encoding="utf-8")  # lets Windows print any character the model sends (’, ‑, emoji)
 load_dotenv()
 client = Groq()
 

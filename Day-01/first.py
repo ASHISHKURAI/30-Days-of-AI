@@ -1,6 +1,8 @@
+import sys
 from dotenv import load_dotenv
 from groq import Groq
 
+sys.stdout.reconfigure(encoding="utf-8")  # lets Windows print any character the model sends (’, ‑, emoji)
 load_dotenv()                      # reads your .env file (searches parent folders too)
 client = Groq()                    # finds GROQ_API_KEY by itself
 
