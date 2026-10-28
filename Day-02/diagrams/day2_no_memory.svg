@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="796" height="392" viewBox="0 0 796 392" role="img" aria-labelledby="title desc">
+<title id="title">Day 2: the model has no memory</title>
+<desc id="desc">Three calls side by side. Call 1 sends 2 messages, Call 2 sends 4, Call 3 sends 6. After each call you append the model's reply and your next question, then send the whole list again.</desc>
+<style>
+text{font-family:"Segoe UI",system-ui,-apple-system,Helvetica,Arial,sans-serif;font-size:12px;fill:#16202B}
+.role{font-family:Consolas,"Cascadia Mono",Menlo,"DejaVu Sans Mono",monospace;font-size:9.5px;font-weight:700}
+.b{font-weight:700}
+.sm{font-size:10.5px}
+.mut{fill:#596577}
+.acc{fill:#2250C6}
+.ct{font-size:11px}
+.ln{stroke:#16202B;stroke-width:1.4;fill:none}
+.lacc{stroke:#2250C6;stroke-width:1.8;fill:none}
+.dash{stroke-dasharray:5 4}
+.chip{stroke:#D8DEE6;stroke-width:1}
+.c-sys{fill:#ECEFF3}
+.c-user{fill:#E3EAFB}
+.c-asst{fill:#DDF2E8}
+.c-new{stroke:#2250C6;stroke-width:1.5;stroke-dasharray:4 3}
+.r-sys{fill:#596577}
+.r-user{fill:#2250C6}
+.r-asst{fill:#0E7A4F}
+</style>
+<defs>
+  <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16202B"/></marker>
+  <marker id="ahacc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2250C6"/></marker>
+</defs>
+<rect x="0.5" y="0.5" width="795" height="391" rx="12" fill="#FFFFFF" stroke="#D8DEE6"/>
+<g transform="translate(16,16)">
+  <text x="16" y="22"><tspan class="b">Call 1</tspan><tspan class="mut" dx="8">sends 2 messages</tspan></text>
+  <text x="272" y="22"><tspan class="b">Call 2</tspan><tspan class="mut" dx="8">sends 4 messages</tspan></text>
+  <text x="528" y="22"><tspan class="b">Call 3</tspan><tspan class="mut" dx="8">sends 6 messages</tspan></text>
+
+  <!-- Call 1 -->
+  <rect class="chip c-sys" x="16" y="184" width="220" height="28" rx="6"/>
+  <text class="role r-sys" x="25" y="202">system</text>
+  <text class="ct" x="86" y="202">Be a cricket coach…</text>
+  <rect class="chip c-user" x="16" y="220" width="220" height="28" rx="6"/>
+  <text class="role r-user" x="25" y="238">user</text>
+  <text class="ct" x="86" y="238">My name is Ashish…</text>
+  <line class="ln" x1="126" y1="250" x2="126" y2="279" marker-end="url(#ah)"/>
+  <text class="sm mut" x="134" y="269">model replies</text>
+  <rect class="chip c-asst c-new" x="16" y="282" width="220" height="28" rx="6"/>
+  <text class="role r-asst" x="25" y="300">assistant</text>
+  <text class="ct" x="86" y="300">Ball pitched at feet.</text>
+
+  <!-- Call 2 -->
+  <rect class="chip c-sys" x="272" y="112" width="220" height="28" rx="6"/>
+  <text class="role r-sys" x="281" y="130">system</text>
+  <text class="ct" x="342" y="130">Be a cricket coach…</text>
+  <rect class="chip c-user" x="272" y="148" width="220" height="28" rx="6"/>
+  <text class="role r-user" x="281" y="166">user</text>
+  <text class="ct" x="342" y="166">My name is Ashish…</text>
+  <rect class="chip c-asst" x="272" y="184" width="220" height="28" rx="6"/>
+  <text class="role r-asst" x="281" y="202">assistant</text>
+  <text class="ct" x="342" y="202">Ball pitched at feet.</text>
+  <rect class="chip c-user" x="272" y="220" width="220" height="28" rx="6"/>
+  <text class="role r-user" x="281" y="238">user</text>
+  <text class="ct" x="342" y="238">What is my name?</text>
+  <line class="ln" x1="382" y1="250" x2="382" y2="279" marker-end="url(#ah)"/>
+  <text class="sm mut" x="390" y="269">model replies</text>
+  <rect class="chip c-asst c-new" x="272" y="282" width="220" height="28" rx="6"/>
+  <text class="role r-asst" x="281" y="300">assistant</text>
+  <text class="ct" x="342" y="300">Ashish. Aim at toes…</text>
+
+  <!-- Call 3 -->
+  <rect class="chip c-sys" x="528" y="40" width="220" height="28" rx="6"/>
+  <text class="role r-sys" x="537" y="58">system</text>
+  <text class="ct" x="598" y="58">Be a cricket coach…</text>
+  <rect class="chip c-user" x="528" y="76" width="220" height="28" rx="6"/>
+  <text class="role r-user" x="537" y="94">user</text>
+  <text class="ct" x="598" y="94">My name is Ashish…</text>
+  <rect class="chip c-asst" x="528" y="112" width="220" height="28" rx="6"/>
+  <text class="role r-asst" x="537" y="130">assistant</text>
+  <text class="ct" x="598" y="130">Ball pitched at feet.</text>
+  <rect class="chip c-user" x="528" y="148" width="220" height="28" rx="6"/>
+  <text class="role r-user" x="537" y="166">user</text>
+  <text class="ct" x="598" y="166">What is my name?</text>
+  <rect class="chip c-asst" x="528" y="184" width="220" height="28" rx="6"/>
+  <text class="role r-asst" x="537" y="202">assistant</text>
+  <text class="ct" x="598" y="202">Ashish. Aim at toes…</text>
+  <rect class="chip c-user" x="528" y="220" width="220" height="28" rx="6"/>
+  <text class="role r-user" x="537" y="238">user</text>
+  <text class="ct" x="598" y="238">Give me one drill.</text>
+  <line class="ln" x1="638" y1="250" x2="638" y2="279" marker-end="url(#ah)"/>
+  <text class="sm mut" x="646" y="269">model replies</text>
+  <rect class="chip c-asst c-new" x="528" y="282" width="220" height="28" rx="6"/>
+  <text class="role r-asst" x="537" y="300">assistant</text>
+  <text class="ct" x="598" y="300">Target-shoe drill…</text>
+
+  <!-- append paths -->
+  <path class="lacc dash" d="M126,310 V330 H254 V198 H269" marker-end="url(#ahacc)"/>
+  <text class="sm acc" x="190" y="348" text-anchor="middle">append reply + next question</text>
+  <path class="lacc dash" d="M382,310 V330 H510 V198 H525" marker-end="url(#ahacc)"/>
+  <text class="sm acc" x="446" y="348" text-anchor="middle">append reply + next question</text>
+</g>
+</svg>

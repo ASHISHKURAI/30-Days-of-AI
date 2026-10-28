@@ -11,6 +11,7 @@
 | `system_prompts.py` | **Build:** asks the same question under 3 system prompts and saves the answers to `system_prompt_comparison.md` |
 | `persona_playground.py` | **Real project:** you type one question; it answers as Teacher, Lawyer and Friend and adds the replies to `persona_replies.txt` |
 | `interview_questions.md` | Interview questions on today's topics |
+| `revision_notes.md` | Revision notes: flow diagram, your real numbers and a recall quiz |
 | `screenshots/` | Proof that the scripts ran (see [Output](#output-proof-it-works)) |
 
 ## Already done

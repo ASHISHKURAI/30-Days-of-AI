@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="892" height="294" viewBox="0 0 892 294" role="img" aria-labelledby="title desc">
+<title id="title">Day 3: parse safely, never crash</title>
+<desc id="desc">Messy text goes to create() with JSON mode at temperature 0. The content string goes through json.loads, then a check of keys and types, and comes out as a clean dict. A 400 error, a failed json.loads or a failed check leads to one retry; a second failure returns None.</desc>
+<style>
+text{font-family:"Segoe UI",system-ui,-apple-system,Helvetica,Arial,sans-serif;font-size:12px;fill:#16202B}
+.mono{font-family:Consolas,"Cascadia Mono",Menlo,"DejaVu Sans Mono",monospace}
+.b{font-weight:700}
+.sm{font-size:10.5px}
+.mut{fill:#596577}
+.warn{fill:#B3261E}
+.box{fill:#FFFFFF;stroke:#16202B;stroke-width:1.2}
+.ok{fill:#DDF2E8;stroke:#0E7A4F;stroke-width:1.4}
+.bad{fill:#FBE9E7;stroke:#B3261E}
+.ln{stroke:#16202B;stroke-width:1.4;fill:none}
+.lwarn{stroke:#B3261E;stroke-width:1.4;fill:none}
+.lmut{stroke:#596577;stroke-width:1.4;fill:none}
+.dash{stroke-dasharray:5 4}
+</style>
+<defs>
+  <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16202B"/></marker>
+  <marker id="ahwarn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B3261E"/></marker>
+  <marker id="ahmut" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#596577"/></marker>
+</defs>
+<rect x="0.5" y="0.5" width="891" height="293" rx="12" fill="#FFFFFF" stroke="#D8DEE6"/>
+<g transform="translate(16,16)">
+  <rect class="box" x="12" y="62" width="108" height="56" rx="8"/>
+  <text class="b" x="66" y="86" text-anchor="middle">messy text</text>
+  <text class="sm mut" x="66" y="104" text-anchor="middle">from the user</text>
+
+  <rect class="box" x="148" y="62" width="132" height="56" rx="8"/>
+  <text class="mono b" x="214" y="86" text-anchor="middle">create()</text>
+  <text class="sm mut" x="214" y="104" text-anchor="middle">JSON mode, temp 0</text>
+
+  <rect class="box" x="308" y="62" width="96" height="56" rx="8"/>
+  <text class="mono b" x="356" y="86" text-anchor="middle">content</text>
+  <text class="sm mut" x="356" y="104" text-anchor="middle">a plain string</text>
+
+  <polygon class="box" points="488,48 548,90 488,132 428,90"/>
+  <text class="mono sm b" x="488" y="87" text-anchor="middle">json.loads</text>
+  <text class="sm" x="488" y="103" text-anchor="middle">works?</text>
+
+  <polygon class="box" points="640,48 700,90 640,132 580,90"/>
+  <text class="sm b" x="640" y="87" text-anchor="middle">right keys</text>
+  <text class="sm" x="640" y="103" text-anchor="middle">and types?</text>
+
+  <rect class="box ok" x="732" y="62" width="116" height="56" rx="8"/>
+  <text class="b" x="790" y="86" text-anchor="middle">clean dict</text>
+  <text class="sm mut" x="790" y="104" text-anchor="middle">safe to use</text>
+
+  <line class="ln" x1="120" y1="90" x2="146" y2="90" marker-end="url(#ah)"/>
+  <line class="ln" x1="280" y1="90" x2="306" y2="90" marker-end="url(#ah)"/>
+  <line class="ln" x1="404" y1="90" x2="426" y2="90" marker-end="url(#ah)"/>
+  <line class="ln" x1="548" y1="90" x2="578" y2="90" marker-end="url(#ah)"/>
+  <text class="sm b" x="563" y="81" text-anchor="middle">yes</text>
+  <line class="ln" x1="700" y1="90" x2="730" y2="90" marker-end="url(#ah)"/>
+  <text class="sm b" x="715" y="81" text-anchor="middle">yes</text>
+
+  <line class="lwarn" x1="256" y1="118" x2="256" y2="194" marker-end="url(#ahwarn)"/>
+  <text class="sm warn" x="262" y="160">400 error</text>
+  <line class="lwarn" x1="488" y1="132" x2="488" y2="194" marker-end="url(#ahwarn)"/>
+  <text class="sm warn" x="494" y="166">no</text>
+  <line class="lwarn" x1="640" y1="132" x2="640" y2="194" marker-end="url(#ahwarn)"/>
+  <text class="sm warn" x="646" y="166">no</text>
+
+  <rect class="box bad" x="232" y="196" width="468" height="54" rx="8"/>
+  <text class="b" x="466" y="219" text-anchor="middle">retry once</text>
+  <text class="sm mut" x="466" y="237" text-anchor="middle">if the second try also fails, return None instead of crashing</text>
+
+  <path class="lmut dash" d="M232,223 H190 V121" marker-end="url(#ahmut)"/>
+  <text class="sm mut" x="184" y="176" text-anchor="end">try again</text>
+</g>
+</svg>

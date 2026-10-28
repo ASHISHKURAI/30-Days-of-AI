@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="792" height="358" viewBox="0 0 792 358" role="img" aria-labelledby="title desc">
+<title id="title">Day 3: few-shot examples are fake history</title>
+<desc id="desc">The messages list for a few-shot prompt: a system message, then two example pairs of user input and assistant JSON that you wrote yourself, then the real user message. The model's reply follows the same JSON pattern.</desc>
+<style>
+text{font-family:"Segoe UI",system-ui,-apple-system,Helvetica,Arial,sans-serif;font-size:12px;fill:#16202B}
+.role,.code{font-family:Consolas,"Cascadia Mono",Menlo,"DejaVu Sans Mono",monospace}
+.code{font-size:11.5px}
+.role{font-size:9.5px;font-weight:700}
+.b{font-weight:700}
+.sm{font-size:10.5px}
+.mut{fill:#596577}
+.acc{fill:#2250C6}
+.ct{font-size:11px}
+.ln{stroke:#16202B;stroke-width:1.4;fill:none}
+.lmut{stroke:#596577;stroke-width:1.4;fill:none}
+.chip{stroke:#D8DEE6;stroke-width:1}
+.c-sys{fill:#ECEFF3}
+.c-user{fill:#E3EAFB}
+.c-asst{fill:#DDF2E8}
+.c-new{stroke:#2250C6;stroke-width:1.5;stroke-dasharray:4 3}
+.r-sys{fill:#596577}
+.r-user{fill:#2250C6}
+.r-asst{fill:#0E7A4F}
+</style>
+<defs>
+  <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16202B"/></marker>
+</defs>
+<rect x="0.5" y="0.5" width="791" height="357" rx="12" fill="#FFFFFF" stroke="#D8DEE6"/>
+<g transform="translate(16,16)">
+  <rect class="chip c-sys" x="16" y="16" width="524" height="32" rx="6"/>
+  <text class="role r-sys" x="28" y="37">system</text>
+  <text class="ct" x="110" y="37">Role, task, rules, the exact JSON keys, "use null if missing"</text>
+
+  <rect class="chip c-user" x="16" y="56" width="524" height="32" rx="6"/>
+  <text class="role r-user" x="28" y="77">user</text>
+  <text class="code" x="110" y="77">paid ravi ₹2.5k on 3 oct 2026</text>
+
+  <rect class="chip c-asst" x="16" y="96" width="524" height="32" rx="6"/>
+  <text class="role r-asst" x="28" y="117">assistant</text>
+  <text class="code" x="110" y="117">{"name": "Ravi", "date": "2026-10-03", "amount": 2500}</text>
+
+  <rect class="chip c-user" x="16" y="136" width="524" height="32" rx="6"/>
+  <text class="role r-user" x="28" y="157">user</text>
+  <text class="code" x="110" y="157">gave 500 for groceries</text>
+
+  <rect class="chip c-asst" x="16" y="176" width="524" height="32" rx="6"/>
+  <text class="role r-asst" x="28" y="197">assistant</text>
+  <text class="code" x="110" y="197">{"name": null, "date": null, "amount": 500}</text>
+
+  <rect class="chip c-user" x="16" y="216" width="524" height="32" rx="6"/>
+  <text class="role r-user" x="28" y="237">user</text>
+  <text class="code" x="110" y="237">transferred 1200 to priya on 12 oct 2026</text>
+
+  <line class="ln" x1="278" y1="250" x2="278" y2="275" marker-end="url(#ah)"/>
+  <text class="sm mut" x="286" y="267">model replies</text>
+
+  <rect class="chip c-asst c-new" x="16" y="278" width="524" height="32" rx="6"/>
+  <text class="role r-asst" x="28" y="299">assistant</text>
+  <text class="code" x="110" y="299">{"name": "Priya", "date": "2026-10-12", "amount": 1200}</text>
+
+  <text class="b" x="560" y="37">Instructions</text>
+  <path class="lmut" d="M548,58 H556 V206 H548"/>
+  <text class="b" x="568" y="120">2 examples</text>
+  <text class="sm mut" x="568" y="137">you wrote these</text>
+  <text class="sm mut" x="568" y="153">as fake turns</text>
+  <text class="b" x="560" y="237">The real message</text>
+  <text class="b acc" x="560" y="299">Same pattern, new data</text>
+</g>
+</svg>

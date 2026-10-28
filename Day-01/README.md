@@ -2,6 +2,7 @@
 
 **Build:** a script that prints a model reply.
 **Real project:** Hello AI, which explains a topic you care about in 3 simple lines.
+**Revise:** [revision_notes.md](revision_notes.md) has the flow diagram, key ideas and a recall quiz.
 
 ## Already done
 - [x] Python 3.14 installed

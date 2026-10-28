@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="832" height="378" viewBox="0 0 832 378" role="img" aria-labelledby="title desc">
+<title id="title">Day 1: one run of first.py</title>
+<desc id="desc">The key goes from .env through load_dotenv into the Groq client. create() sends a request over HTTPS to the model on Groq's servers. The response comes back as a reply object, and print shows the text and token counts. .gitignore stops .env from reaching GitHub.</desc>
+<style>
+text{font-family:"Segoe UI",system-ui,-apple-system,Helvetica,Arial,sans-serif;font-size:12px;fill:#16202B}
+.mono,.zlab{font-family:Consolas,"Cascadia Mono",Menlo,"DejaVu Sans Mono",monospace}
+.b{font-weight:700}
+.sm{font-size:10.5px}
+.mut{fill:#596577}
+.acc{fill:#2250C6}
+.warn{fill:#B3261E}
+.disp{font-weight:800;font-size:15px}
+.zlab{font-size:10.5px;letter-spacing:.08em;fill:#596577}
+.zone{fill:#F4F6F9;stroke:#D8DEE6;stroke-width:1.2;stroke-dasharray:5 4}
+.box{fill:#FFFFFF;stroke:#16202B;stroke-width:1.2}
+.cloud{fill:#E3EAFB;stroke:#2250C6}
+.ghost{fill:#F4F6F9;stroke:#596577;stroke-dasharray:3 3}
+.ln{stroke:#16202B;stroke-width:1.4;fill:none}
+.lacc{stroke:#2250C6;stroke-width:1.8;fill:none}
+.lwarn{stroke:#B3261E;stroke-width:1.4;fill:none}
+.dash{stroke-dasharray:5 4}
+.x{stroke-width:2.2}
+</style>
+<defs>
+  <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16202B"/></marker>
+  <marker id="ahacc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2250C6"/></marker>
+</defs>
+<rect x="0.5" y="0.5" width="831" height="377" rx="12" fill="#FFFFFF" stroke="#D8DEE6"/>
+<g transform="translate(16,16)">
+  <text class="zlab" x="20" y="24">YOUR LAPTOP</text>
+  <rect class="zone" x="8" y="34" width="568" height="246" rx="12"/>
+  <text class="zlab" x="644" y="24">GROQ CLOUD</text>
+  <rect class="zone" x="632" y="34" width="160" height="246" rx="12"/>
+
+  <rect class="box" x="24" y="62" width="108" height="56" rx="8"/>
+  <text class="mono b" x="78" y="86" text-anchor="middle">.env</text>
+  <text class="mono sm mut" x="78" y="104" text-anchor="middle">GROQ_API_KEY</text>
+
+  <rect class="box" x="160" y="62" width="108" height="56" rx="8"/>
+  <text class="mono b" x="214" y="86" text-anchor="middle">load_dotenv()</text>
+  <text class="sm mut" x="214" y="104" text-anchor="middle">loads the key</text>
+
+  <rect class="box" x="296" y="62" width="108" height="56" rx="8"/>
+  <text class="mono b" x="350" y="86" text-anchor="middle">Groq()</text>
+  <text class="sm mut" x="350" y="104" text-anchor="middle">client + key</text>
+
+  <rect class="box" x="432" y="62" width="108" height="56" rx="8"/>
+  <text class="mono b" x="486" y="86" text-anchor="middle">create()</text>
+  <text class="sm mut" x="486" y="104" text-anchor="middle">builds request</text>
+
+  <line class="ln" x1="132" y1="90" x2="158" y2="90" marker-end="url(#ah)"/>
+  <line class="ln" x1="268" y1="90" x2="294" y2="90" marker-end="url(#ah)"/>
+  <line class="ln" x1="404" y1="90" x2="430" y2="90" marker-end="url(#ah)"/>
+
+  <line class="lacc" x1="540" y1="90" x2="646" y2="90" marker-end="url(#ahacc)"/>
+  <text class="sm acc b" x="604" y="81" text-anchor="middle">request</text>
+  <text class="sm mut" x="604" y="106" text-anchor="middle">HTTPS</text>
+
+  <rect class="box cloud" x="648" y="62" width="128" height="184" rx="10"/>
+  <text class="disp" x="712" y="94" text-anchor="middle">LLM</text>
+  <text class="mono sm" x="712" y="114" text-anchor="middle">gpt-oss-120b</text>
+  <text class="sm mut" x="712" y="150" text-anchor="middle">reads your tokens,</text>
+  <text class="sm mut" x="712" y="168" text-anchor="middle">thinks, then writes</text>
+  <text class="sm mut" x="712" y="186" text-anchor="middle">one token at a time</text>
+
+  <line class="lacc" x1="648" y1="218" x2="542" y2="218" marker-end="url(#ahacc)"/>
+  <text class="sm acc b" x="604" y="209" text-anchor="middle">response</text>
+  <text class="sm mut" x="604" y="234" text-anchor="middle">JSON</text>
+
+  <rect class="box" x="432" y="190" width="108" height="56" rx="8"/>
+  <text class="mono b" x="486" y="214" text-anchor="middle">reply</text>
+  <text class="sm mut" x="486" y="232" text-anchor="middle">choices + usage</text>
+
+  <line class="ln" x1="432" y1="218" x2="406" y2="218" marker-end="url(#ah)"/>
+
+  <rect class="box" x="296" y="190" width="108" height="56" rx="8"/>
+  <text class="mono b" x="350" y="214" text-anchor="middle">print()</text>
+  <text class="sm mut" x="350" y="232" text-anchor="middle">text + tokens</text>
+
+  <line class="lwarn dash" x1="78" y1="118" x2="78" y2="270"/>
+  <line class="lwarn x" x1="71" y1="273" x2="85" y2="287"/>
+  <line class="lwarn x" x1="85" y1="273" x2="71" y2="287"/>
+  <text class="mono sm warn" x="90" y="196">.gitignore</text>
+  <text class="sm mut" x="90" y="212">blocks .env</text>
+
+  <rect class="box ghost" x="24" y="298" width="108" height="36" rx="8"/>
+  <text class="b" x="78" y="321" text-anchor="middle">GitHub</text>
+  <text class="sm mut" x="146" y="321">gets your code, never your key</text>
+</g>
+</svg>
